@@ -1,6 +1,14 @@
-import Swal from "sweetalert2";
+// import { useContext } from "react";
+// import { AuthContext } from "../Provider/AuthProvider";
+
+
+// const { createUser } = useContext(AuthContext)
+
+
+
 
 const Register = () => {
+
  const handleRegister= e => {
   e.preventDefault();
 const form = e.target;
@@ -10,7 +18,17 @@ const email = form.email.value;
 const password = form.password.value;
 const user = {name,imgUrl,email,password};
 console.log(user);
-if (user){ Swal.fire('Successfully register!')}
+
+
+// createUser(name,email,password,imgUrl)
+// .then(result => {
+//   console.log(result.user);
+// })
+// .catch(error => {
+// console.error(error);
+// })
+
+// if (user){ Swal.fire('Successfully register!')}
  }
 
 
