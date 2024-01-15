@@ -1,6 +1,7 @@
 import React from "react";
 import { useLoaderData } from "react-router-dom";
 import Cardproduct from "./Cardproduct";
+import Slider from "../Slider";
 
 const AllProduct = () => {
   const loadData = useLoaderData();
@@ -14,6 +15,7 @@ const AllProduct = () => {
   } else {
     return (
       <div>
+        <Slider></Slider>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 p-3 m-5">
           {loadData.map((cart) => (
             <Cardproduct key={cart._id} cart={cart}></Cardproduct>

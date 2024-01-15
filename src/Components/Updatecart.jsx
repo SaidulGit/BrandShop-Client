@@ -18,7 +18,7 @@ const Updatecart = () => {
     const rating = form.rating.value;
     const user = {name,photoUrl,price,rating,brand,type}
 
-    fetch(`http://localhost:5000/updatedata/${id}`,{
+    fetch(`https://brand-assignment-server-ombru6p5j-saidul-islams-projects.vercel.app/updatedata/${id}`,{
         method:"PUT",
         headers: {
             "content-type": "application/json"

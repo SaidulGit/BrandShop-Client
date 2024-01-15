@@ -30,7 +30,7 @@ const router = createBrowserRouter([
         loader: async ({ params }) => {
           try {
             const data = await fetch(
-              `http://localhost:5000/brand/${params.brand}`
+              `https://brand-assignment-server-ombru6p5j-saidul-islams-projects.vercel.app/brand/${params.brand}`
             );
             const result = await data.json();
             return result;
@@ -54,18 +54,18 @@ const router = createBrowserRouter([
       },
       {
         path: "/mycart",
-        loader: () => fetch("http://localhost:5000/cartdata"),
+        loader: () => fetch("https://brand-assignment-server-ombru6p5j-saidul-islams-projects.vercel.app/cartdata"),
         element: <Private><MyCart></MyCart></Private>,
       },
       {
         path: "/product/:name",
         loader: async ({ params }) =>
-          await fetch(`http://localhost:5000/product/${params.name}`),
+          await fetch(`https://brand-assignment-server-ombru6p5j-saidul-islams-projects.vercel.app/product/${params.name}`),
         element: <DetailsProduct></DetailsProduct>,
       },
       {
         path: "/update/:id",
-        loader: () => fetch("http://localhost:5000/allproduct"),
+        loader: () => fetch("https://brand-assignment-server-ombru6p5j-saidul-islams-projects.vercel.app/allproduct"),
         element: <Private><Updatecart></Updatecart></Private>,
       },
     ],

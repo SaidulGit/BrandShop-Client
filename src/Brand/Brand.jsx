@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import BrandCard from './BrandCard';
 import New from './New';
 import Popular from './Popular';
+import Slider from '../Slider';
 
 const Brand = () => {
     const [brand,setBrand] = useState([]);

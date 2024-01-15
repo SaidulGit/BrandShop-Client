@@ -16,7 +16,7 @@ const AddProduct = () => {
     const user = {name,photoUrl,price,description,rating,brand,type}
     console.log(user)
 
-    fetch("http://localhost:5000/add",{
+    fetch("https://brand-assignment-server-ombru6p5j-saidul-islams-projects.vercel.app/add",{
       method: "POST",
       headers: {
         "content-type" : "application/json"

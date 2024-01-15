@@ -12,7 +12,7 @@ const DetailsProduct = () => {
      
      const user = {cartImg,cartName,cartbrand,cartprice}
     const addCart = () => {
-      fetch("http://localhost:5000/cart",{
+      fetch("https://brand-assignment-server-ombru6p5j-saidul-islams-projects.vercel.app/cart",{
         method:"POST",
         headers:{
           "content-type": "application/json"
