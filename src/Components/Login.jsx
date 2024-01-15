@@ -1,12 +1,46 @@
-const Login = () => {
+import { useContext } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
+import { AuthContext } from "../Provider/AuthProvider";
+import Swal from "sweetalert2";
 
+
+const Login = () => {
+  const location = useLocation();
+  const from = location.state?.from?.pathname || "/";
+  const navigate = useNavigate();
+  const {signIn} = useContext(AuthContext)
+
+
+
+ 
 const handleSubmit= e => {
   e.preventDefault();
   const form = e.target;
   const email = form.email.value;
   const password = form.password.value;
   const user = { email,password};
-  console.log (user);
+  signIn(user)
+  .then(res=> res.user)
+  .catch(erroe => console.error(erroe))
+  Swal.fire({
+    title: "SussessFul Login",
+    showClass: {
+      popup: `
+        animate__animated
+        animate__fadeInUp
+        animate__faster
+      `
+    },
+    hideClass: {
+      popup: `
+        animate__animated
+        animate__fadeOutDown
+        animate__faster
+      `
+    }
+  });
+  navigate(from, { replace: true });
+  
   
 }
   return (

@@ -1,0 +1,32 @@
+[
+    {
+      "id": 1,
+      "brand": "Apple",
+      "photoUrl": "https://media.licdn.com/dms/image/D4D12AQHwi4jdRd3fQQ/article-cover_image-shrink_600_2000/0/1685279753620?e=2147483647&v=beta&t=7I-pJ0kDQfNl4w-0Ue8aPyol_X-aWOQlzp18NhTldys"
+    },
+    {
+      "id": 2,
+      "brand": "Samsung",
+      "photoUrl": "https://images.samsung.com/is/image/samsung/assets/bd/about-us/brand/logo/mo/256_144_1.png?$512_N_PNG$"
+    },
+    {
+      "id": 3,
+      "brand": "HP",
+      "photoUrl": "https://1000logos.net/wp-content/uploads/2017/02/Colors-HP-Logo.jpg"
+    },
+    {
+      "id": 4,
+      "brand": "Google",
+      "photoUrl": "https://cdn2.hubspot.net/hubfs/53/image8-2.jpg"
+    },
+    {
+      "id": 5,
+      "brand": "Intel",
+      "photoUrl": "https://logos-world.net/wp-content/uploads/2021/09/Intel-Emblem.png"
+    },
+    {
+      "id": 6,
+      "brand": "Microsoft",
+      "photoUrl": "https://logos-world.net/wp-content/uploads/2020/09/Microsoft-Logo-2012-present.jpg"
+    }
+  ]

@@ -1,6 +1,13 @@
 // import { useContext } from "react";
 // import { AuthContext } from "../Provider/AuthProvider";
 
+import { useContext } from "react";
+import { useNavigate } from "react-router-dom";
+import { AuthContext } from "../Provider/AuthProvider";
+import Swal from "sweetalert2";
+
+
+
 
 // const { createUser } = useContext(AuthContext)
 
@@ -8,6 +15,8 @@
 
 
 const Register = () => {
+const navigate = useNavigate()
+const {createUser} = useContext(AuthContext);
 
  const handleRegister= e => {
   e.preventDefault();
@@ -16,19 +25,18 @@ const name = form.name.value;
 const imgUrl = form.imageUrl.value;
 const email = form.email.value;
 const password = form.password.value;
-const user = {name,imgUrl,email,password};
-console.log(user);
-
-
-// createUser(name,email,password,imgUrl)
-// .then(result => {
-//   console.log(result.user);
-// })
-// .catch(error => {
-// console.error(error);
-// })
-
-// if (user){ Swal.fire('Successfully register!')}
+createUser(email,password)
+.then(res => res.user)
+.catch(error => console.error(error))
+   e.target.reset()
+  navigate("/")
+  Swal.fire({
+    position: "top-start",
+    icon: "success",
+    title: "Registation Success",
+    showConfirmButton: false,
+    timer: 1500
+  });
  }
 
 
