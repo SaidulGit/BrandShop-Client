@@ -34,7 +34,7 @@ const handleLogout = () => {
     </div>
     <img className="w-20 h-20 mr-2 rounded-2xl" src="https://i.ibb.co/yBgFcFR/rsz-1grey-orange-initial-design-studio-logo.png" alt="" />
 
-    <h2 className="text-center text-2xl font-bold text-rose-300">Think <span className="text-green-300">Unlimited</span></h2>
+    <h2 className="text-center text-2xl font-bold text-rose-300">Brand <span className="text-green-300">Shop</span></h2>
   </div>
   <div className="navbar-center space-x-3 hidden lg:flex">
   
