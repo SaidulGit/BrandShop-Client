@@ -21,7 +21,7 @@ const handleLogout = () => {
 
   return (
     <div>
-<div className="navbar bg-green-100">
+<div className="navbar bg-white">
   <div className="navbar-start">
     <div className="dropdown">
       {/* <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -32,31 +32,32 @@ const handleLogout = () => {
         <li><a>Item 3</a></li>
       </ul> */}
     </div>
-    <img className="w-20 h-20 mr-2 rounded-2xl" src="https://i.ibb.co/yBgFcFR/rsz-1grey-orange-initial-design-studio-logo.png" alt="" />
+   <Link to="/"> <img className="w-20 h-20 mr-2 rounded-2xl" src="https://i.ibb.co/9p8rVpG/make-a-logo-for-a-websitewebsite-name-Brand-sho.jpg" alt="" />
+   </Link>
 
-    <h2 className="text-center text-2xl font-bold text-rose-300">Brand <span className="text-green-300">Shop</span></h2>
+    
   </div>
   <div className="navbar-center space-x-3 hidden lg:flex">
   
   <NavLink
        to="/"
        className={({ isActive, isPending }) =>
-       isPending ? "pending " : isActive ? "text-red-500 underline font-bold" : ""}>Home
+       isPending ? "pending " : isActive ? "text-orange-400 font-bold" : ""}>Home
        </NavLink>
        <NavLink
        to="/addproduct"
        className={({ isActive, isPending }) =>
-       isPending ? "pending " : isActive ? "text-red-500 underline font-bold" : ""}>Add Product
+       isPending ? "pending " : isActive ? "text-orange-400  font-bold" : ""}>Add Product
        </NavLink>
        <NavLink
        to="/mycart"
        className={({ isActive, isPending }) =>
-       isPending ? "pending " : isActive ? "text-red-500 underline font-bold" : ""}>My Cart
+       isPending ? "pending " : isActive ? "text-orange-400  font-bold" : ""}>My Cart
        </NavLink>
        <NavLink
        to="/registation"
        className={({ isActive, isPending }) =>
-       isPending ? "pending " : isActive ? "text-red-500 underline font-bold" : ""}>Registation
+       isPending ? "pending " : isActive ? "text-orange-400  font-bold" : ""}>Registation
        </NavLink>
 
 
