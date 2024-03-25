@@ -2,6 +2,10 @@ import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom"
 import { AuthContext } from "../Provider/AuthProvider";
 import Swal from "sweetalert2";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCartShopping } from '@fortawesome/free-solid-svg-icons'
+
+
 
 const Navbar = () => {
   const { user, logout } = useContext(AuthContext);
@@ -20,7 +24,7 @@ const handleLogout = () => {
 }
 
   return (
-    <div>
+    <div className="pb-24">
 <div className="navbar bg-white fixed z-50">
   <div className="navbar-start">
     <div className="dropdown">
@@ -30,7 +34,7 @@ const handleLogout = () => {
 
     
   </div>
-  <div className="navbar-center space-x-3 hidden lg:flex">
+  <div className="navbar-center space-x-5 hidden lg:flex">
   
   <NavLink
        to="/"
@@ -45,7 +49,7 @@ const handleLogout = () => {
        <NavLink
        to="/mycart"
        className={({ isActive, isPending }) =>
-       isPending ? "pending " : isActive ? "text-orange-400  font-bold" : ""}>My Cart
+       isPending ? "pending " : isActive ? "text-orange-400  font-bold" : ""}><FontAwesomeIcon className="text-2xl text-pink-400" icon={faCartShopping} />
        </NavLink>
        <NavLink
        to="/registation"

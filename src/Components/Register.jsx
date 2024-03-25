@@ -50,10 +50,13 @@ createUser(email,password)
     <div className="text-center lg:text-left">
       <h1 className="text-5xl font-bold">Register now!</h1>
     </div> <br />
-    <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+    <div className="card flex-shrink-0 w-full max-w-lg shadow-2xl bg-base-100">
 
       <form onSubmit={handleRegister} className="card-body">
-      <div className="form-control">
+        {/* main div  */}
+    <div className="flex space-x-1">
+         <div>
+     <div className="form-control">
           <label className="label">
             <span className="label-text">Name</span>
           </label>
@@ -65,6 +68,8 @@ createUser(email,password)
           </label>
           <input type="text" name="imageUrl" placeholder="image url" className="input input-bordered" />
         </div>
+     </div>
+        <div>
         <div className="form-control">
           <label className="label">
             <span className="label-text">Email</span>
@@ -77,9 +82,11 @@ createUser(email,password)
           </label>
           <input type="password" name="password" placeholder="password" className="input input-bordered" required />
           </div>
+        </div>
+    </div>
         <div className="form-control mt-6">
           <button className="btn btn-primary">Register</button> <br />
-          <p>Allready have an account.Please <a className="text-base font-semibold text-blue-500" href="/login">Login </a></p>
+          <p className="text-center">Allready have an account.Please <a className="text-base font-semibold text-blue-500" href="/login">Login </a></p>
           
         </div>
       </form>
